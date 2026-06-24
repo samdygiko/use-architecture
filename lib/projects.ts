@@ -144,8 +144,7 @@ export const projects: Project[] = [
       "Contract: JCT Minor Works",
       "Project Cost: £156,289",
     ],
-    description:
-      "Neil and Helen escaped to Stroud in June 2007 to relieve the febrile intensity of London, seeking a more gentle and engaged way of life. Their refuge was a charming Victorian redbrick terrace on a steeply sloping street with an undulating, vertiginous garden to the rear. We sought to extend the inherently insular nature of the Victorian house by extending the ground floor as a communal living space, spilling out from the formality of the front room, through the vibrancy of the open-plan kitchen and dining areas and into a sheltered rustic terrace, rising up via a series of curated terraces into the episodic garden. A simple and elegant timber structure was clad in cedar shingles and crowned by a lush green roof, responding and reflecting to the terraces.",
+    description: "[PROJECT DESCRIPTION TO BE ADDED]",
     cover: restCR + "CR 01.jpg",
     images: [
       "CR 01.jpg",
@@ -257,8 +256,15 @@ export const projects: Project[] = [
     category: "rest",
     title: "Bisley Road",
     subtitle: "Private Lives · Stroud",
-    meta: ["RIBA Stages 01 — 06", "Contract: JCT Minor Works"],
-    description: "[PROJECT DESCRIPTION TO BE ADDED]",
+    meta: [
+      "Client: Neil Arthur & Helen Kincaid",
+      "RIBA Stages 01 — 06",
+      "Start May 2008 · Completion Feb 2009",
+      "Contract: JCT Minor Works",
+      "Project Cost: £78,765",
+    ],
+    description:
+      "Neil and Helen escaped to Stroud in June 2007 to relieve the febrile intensity of London, seeking a more gentle and engaged way of life. Their refuge was a charming Victorian redbrick terrace on a steeply sloping street with an undulating, vertiginous garden to the rear. We sought to extend the inherently insular nature of the Victorian house by extending the ground floor as a communal living space, spilling out from the formality of the front room, through the vibrancy of the open-plan kitchen and dining areas and into a sheltered rustic terrace, rising up via a series of curated terraces into the episodic garden. A simple and elegant timber structure was clad in cedar shingles and crowned by a lush green roof, responding and reflecting to the terraces.",
     cover: restBR + "BR-01-rear view.jpg",
     images: [
       "BR-01-rear view.jpg",
