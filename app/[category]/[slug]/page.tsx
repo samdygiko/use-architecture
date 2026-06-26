@@ -30,9 +30,30 @@ export default function ProjectPage({
 }: {
   params: { category: string; slug: string };
 }) {
-  if (params.category !== "work" && params.category !== "rest") notFound();
+  if (params.category !== "work" && params.category !== "rest" && params.category !== "play") notFound();
   const p = projectBySlug(params.category, params.slug);
   if (!p) notFound();
+
+  // Counter for priority/alt indexing across sections + flat images.
+  let imgIndex = 0;
+  const renderImage = (src: string) => {
+    const i = imgIndex++;
+    return (
+      <figure key={src} className="relative w-full">
+        <div className="relative w-full">
+          <Image
+            src={src}
+            alt={`${p.title} — image ${i + 1}`}
+            width={2200}
+            height={1467}
+            sizes="(min-width: 1100px) 1036px, 100vw"
+            className="w-full h-auto"
+            priority={i === 0}
+          />
+        </div>
+      </figure>
+    );
+  };
 
   return (
     <main className="mx-auto max-w-[1100px] px-5 md:px-8 py-8 md:py-14">
@@ -63,26 +84,22 @@ export default function ProjectPage({
         )}
       </header>
 
-      <div className="space-y-6 md:space-y-10">
-        {p.images.map((src, i) => (
-          <figure
-            key={src}
-            className="relative w-full"
-          >
-            <div className="relative w-full">
-              <Image
-                src={src}
-                alt={`${p.title} — image ${i + 1}`}
-                width={2200}
-                height={1467}
-                sizes="(min-width: 1100px) 1036px, 100vw"
-                className="w-full h-auto"
-                priority={i === 0}
-              />
-            </div>
-          </figure>
-        ))}
-      </div>
+      {p.sections && p.sections.length > 0 ? (
+        <div className="space-y-16 md:space-y-24">
+          {p.sections.map((sec) => (
+            <section key={sec.name} className="space-y-6 md:space-y-10">
+              <h2 className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] text-ink/60 border-t border-ink/15 pt-3">
+                {sec.name}
+              </h2>
+              {sec.images.map(renderImage)}
+            </section>
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-6 md:space-y-10">
+          {p.images.map(renderImage)}
+        </div>
+      )}
     </main>
   );
 }

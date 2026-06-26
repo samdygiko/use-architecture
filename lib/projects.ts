@@ -1,5 +1,10 @@
 export type Category = "work" | "rest" | "play";
 
+export type ProjectSection = {
+  name: string;
+  images: string[];
+};
+
 export type Project = {
   slug: string;
   category: Category;
@@ -9,6 +14,10 @@ export type Project = {
   description?: string;
   cover: string;
   images: string[];
+  /** Optional sub-sections. When present, the project page renders them with
+   *  labelled sub-headings in place of the flat image stack. Used by umbrella
+   *  projects that bundle multiple discrete pieces of work. */
+  sections?: ProjectSection[];
 };
 
 const work3 = "/images/work/mentmore-3/";
@@ -21,6 +30,15 @@ const restLCR = "/images/rest/lower-clapton-road/";
 const restBR = "/images/rest/bisley-road/";
 const restLFE = "/images/rest/london-fields-estate/";
 const restOS = "/images/rest/old-street/";
+
+const playIOL = "/images/play/iol/";
+const playArabica = "/images/play/arabica/";
+const playBocca = "/images/play/bocca-di-lupo/";
+const playAR = "/images/play/african-rainbow/";
+const playMC = "/images/play/market-cafe/";
+const playMA = "/images/play/mobile-architecture/";
+const playN10 = "/images/play/number-10/";
+const playSP = "/images/play/south-pole/";
 
 export const projects: Project[] = [
   // ── WORK ───────────────────────────────────────────────
@@ -348,6 +366,296 @@ export const projects: Project[] = [
       "13.jpg",
       "14.jpg",
     ].map((n) => restOS + n),
+  },
+
+  // ── PLAY ───────────────────────────────────────────────
+  {
+    slug: "south-pole",
+    category: "play",
+    title: "South Pole Bar",
+    subtitle: "Basement dive dance bar",
+    meta: [
+      "Client: USE Architecture",
+      "RIBA Stages 01 — 06",
+      "Inception April 1998 · Completion September 1998",
+      "Contract: JCT Minor Works",
+      "Project Cost: £98,000",
+    ],
+    description:
+      "Air-line style meets igloo in this cool, cavernous basement dive dance bar.",
+    cover: playSP + "01.jpg",
+    images: [
+      "01.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+    ].map((n) => playSP + n),
+  },
+  {
+    slug: "bocca-di-lupo",
+    category: "play",
+    title: "Bocca Di Lupo",
+    subtitle: "Soho, London",
+    meta: [
+      "Client: USE Architecture",
+      "RIBA Stages 01 — 06",
+      "Inception February 2008 · Completion December 2009",
+      "Contract: JCT Minor Works",
+      "Project Cost: £869,000",
+      "Awards — Time Out Best Restaurant 2009; Evening Standard Restaurant of the Year 2009; Westminster Best Borough Refurbishment Soho 2010",
+    ],
+    description:
+      "On launch Bocca was hailed as an imminent Soho institution, garnering the above awards within months. USE sought to reflect the epic Italian scooter journey — undertaken by Joseph and Victor — to research Bocca's experimentally eclectic regional menu by seeking to marry the faded splendour of a Tuscan villa with the rustic intimacy of a Sicilian farmhouse. Add to that the bustle and hustle of a 15-metre Carrara marble railway-café counter and the epic universe of Italian culture is encapsulated in a single sensuous space. Within the tight façade zone of the typical Soho street frontage, Bocca's hand-cut brick façade espouses the vibrancy and sinuous energy of Roman Mannerist language — to give the illusion of just arriving, whilst always there.",
+    cover: playBocca + "01 copy.jpg",
+    images: [
+      "01 copy.jpg",
+      "02.jpg",
+      "03 copy.jpg",
+      "05 copy.jpg",
+      "06.jpg",
+      "07.jpg",
+      "07.5.jpg",
+      "07.6png.jpg",
+      "07.7png.jpg",
+      "08.jpg",
+      "09 copy.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg",
+      "13.jpg",
+    ].map((n) => playBocca + n),
+  },
+  {
+    slug: "market-cafe",
+    category: "play",
+    title: "Market Cafe",
+    subtitle: "Broadway Market, London",
+    meta: [
+      "Client: USE Architecture",
+      "RIBA Stages 01 — 06",
+      "Inception May 2008 · Completion September 2008",
+      "Contract: JCT Minor Works",
+      "Project Cost: £85,740",
+    ],
+    description:
+      "Market Cafe is a fond riff on the classic East End joint — E. Pellici. Evoking late nights and early days, this then-staple of newly-evolved Broadway Market fast became a fixture, informed by the simple elegance and powerful flavours of classic Italian fast/slow cuisine.",
+    cover: playMC + "01.jpg",
+    images: [
+      "01.jpg",
+      "02.jpg",
+      "03.JPG",
+      "04.JPG",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "10.jpg",
+      "12.jpg",
+    ].map((n) => playMC + n),
+  },
+  {
+    slug: "mobile-architecture",
+    category: "play",
+    title: "Mobile Architecture",
+    subtitle: "Pop-up structures · 2008 — 2015",
+    meta: [
+      "Client: USE Architecture",
+      "RIBA Stages 01 — 06",
+      "Inception May 2008 · Completion September 2015",
+      "Contract: JCT Minor Works",
+      "Project Cost: £20,000",
+      "Award — Kensington & Chelsea InTRANSIT Festival Portobello Pavilion 2015",
+    ],
+    description:
+      "We addressed the spontaneous potential and anti-static nature of the architectural product via a series of investigations and explorations, challenging place and permanence — finally realised in built form for the Kensington & Chelsea InTRANSIT Festival Portobello Pavilion.",
+    cover: playMA + "portobello-pop--00.jpg",
+    images: [
+      "portobello-pop--00.jpg",
+      "portobello-pop--01.jpg",
+      "portobello-pop--02.corner.jpg",
+      "portobello-pop--03.jpg",
+      "portobello-pop--04.jpg",
+      "portobello-pop--05.jpg",
+      "portobello-pop--06.jpg",
+      "portobello-pop--07.jpg",
+      "portobello-pop--08.jpg",
+      "portobello-pop--09.jpg",
+      "portobello-pop--10.jpg",
+      "portobello-pop--11.jpg",
+      "pop-studio--02.jpg",
+      "pop-studio--03.jpg",
+      "pop-studio--04.jpg",
+      "rap-riad--01.jpg",
+      "rap-riad--02.jpg",
+      "rap-riad--03.jpg",
+      "rap-riad--04.jpg",
+      "rap-riad--05.jpg",
+      "rap-riad--06.jpg",
+      "pop-pantechnicon--01.jpg",
+      "pop-pantechnicon--02.jpg",
+      "pop-pantechnicon--03.jpg",
+      "pop-pantechnicon--04.jpg",
+      "cloud-9--01.cloud9_ copy.jpg",
+      "cloud-9--02.cloud9_ copy.jpg",
+      "cloud-9--03.houseboat1 copy.jpg",
+      "cloud-9--04.jpg",
+    ].map((n) => playMA + n),
+    sections: [
+      {
+        name: "Portobello Pop",
+        images: [
+          "portobello-pop--00.jpg",
+          "portobello-pop--01.jpg",
+          "portobello-pop--02.corner.jpg",
+          "portobello-pop--03.jpg",
+          "portobello-pop--04.jpg",
+          "portobello-pop--05.jpg",
+          "portobello-pop--06.jpg",
+          "portobello-pop--07.jpg",
+          "portobello-pop--08.jpg",
+          "portobello-pop--09.jpg",
+          "portobello-pop--10.jpg",
+          "portobello-pop--11.jpg",
+        ].map((n) => playMA + n),
+      },
+      {
+        name: "Pop Studio",
+        images: ["pop-studio--02.jpg", "pop-studio--03.jpg", "pop-studio--04.jpg"].map((n) => playMA + n),
+      },
+      {
+        name: "Rap Riad",
+        images: [
+          "rap-riad--01.jpg",
+          "rap-riad--02.jpg",
+          "rap-riad--03.jpg",
+          "rap-riad--04.jpg",
+          "rap-riad--05.jpg",
+          "rap-riad--06.jpg",
+        ].map((n) => playMA + n),
+      },
+      {
+        name: "Pop Pantechnicon",
+        images: [
+          "pop-pantechnicon--01.jpg",
+          "pop-pantechnicon--02.jpg",
+          "pop-pantechnicon--03.jpg",
+          "pop-pantechnicon--04.jpg",
+        ].map((n) => playMA + n),
+      },
+      {
+        name: "Cloud 9",
+        images: [
+          "cloud-9--01.cloud9_ copy.jpg",
+          "cloud-9--02.cloud9_ copy.jpg",
+          "cloud-9--03.houseboat1 copy.jpg",
+          "cloud-9--04.jpg",
+        ].map((n) => playMA + n),
+      },
+    ],
+  },
+  {
+    slug: "arabica",
+    category: "play",
+    title: "Arabica",
+    subtitle: "Borough Market, London",
+    meta: [
+      "Client: James Walters",
+      "RIBA Stages 01 — 06",
+      "Inception May 2013 · Completion May 2014",
+      "Contract: JCT Minor Works",
+      "Project Cost: £369,000",
+    ],
+    description:
+      "Following Arabica's long-term residency as the largest outlet in Selfridges' exceptionally historic Food Hall, proprietor James Walters commissioned USE — on the back of Bocca Di Lupo's deliriously successful launch — to design and deliver the next step up: an upgrade from Borough Market's ersatz table-top inception to a fully blown 50-cover restaurant in a railway arch in the then-burgeoning foodie must-go destination spot. We fused contemporary and traditional Arabic motifs to deliver a nuanced interpretation of the layers and language of the levantine leitmotif.",
+    cover: playArabica + "Arabica-1-1024x768 copy.jpg",
+    images: [
+      "Arabica-1-1024x768 copy.jpg",
+      "Arabica-2 copy.jpg",
+      "Arabica-3-1024x768 copy.jpg",
+      "Arabica-4 copy.jpg",
+      "Arabica-5 copy.jpg",
+      "Arabica-6 copy.jpg",
+    ].map((n) => playArabica + n),
+  },
+  {
+    slug: "iol",
+    category: "play",
+    title: "The Institute of Light",
+    subtitle: "Hackney, London",
+    meta: [
+      "Client: USE Architecture",
+      "RIBA Stages 01 — 06",
+      "Inception April 2016 · Completion July 2016",
+      "Contract: JCT Minor Works",
+      "Project Cost: £320,000",
+    ],
+    description:
+      "Conceived and driven by Cedric Price's fusion of high and low culture — The Fun Palace — USE envisaged The Institute of Light as a multi-cultural media hub providing space for Hackney creatives to work, rest and play. Driven by an analogue sensibility of considered creativity, and rejecting the immediacy and facile nature of digital technology, IOL celebrated slow culture in a 35mm cinema, vinyl record store, cinematic bookstore and Brazilian street-food bar/restaurant. An inherently flexible design meant the daytime vinyl store morphed into a night-time cinema and the bookstore into a bar — housing the creative royalties of The Royal College, the Serpentine, the Whitechapel, the BFI and the Bartlett, and paradoxically the commercial powerhouse of Virgin Atlantic.",
+    cover: playIOL + "01.jpg",
+    images: [
+      "0.0.jpg",
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "04.5.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "09.1png.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg",
+      "13.jpg",
+      "14.jpg",
+      "15.jpg",
+      "16.5.jpg",
+    ].map((n) => playIOL + n),
+  },
+  {
+    slug: "number-10",
+    category: "play",
+    title: "Number 10",
+    subtitle: "IOL re-launch · Hackney",
+    meta: [
+      "Client: USE Architecture",
+      "RIBA Stages 01 — 06",
+      "Inception July 2018 · Completion September 2018",
+      "Contract: JCT Minor Works",
+      "Project Cost: £115,740",
+    ],
+    description:
+      "The cultural capital of IOL was re-launched in 2018 to focus a diverse event-led programme incorporating a series of innovative kitchen residencies and cultural partnerships. With a controlled palette of stage-inspired lightweight aluminium framing combined with concealed fixed luminescent polycarbonate cladding, the by-day cocktail laboratory morphed into a by-night boutique cinema lounge hosting a variety of sound-and-vision experiences. A series of flexible and responsive artisan light-kitchens were located to the terraces, utilising sandblasted Cor-Ten enclosures to create a fertile and eclectic kitchen hub to serve the newly resident cultural community.",
+    cover: playN10 + "01.jpg",
+    images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"].map((n) => playN10 + n),
+  },
+  {
+    slug: "african-rainbow",
+    category: "play",
+    title: "African Rainbow",
+    subtitle: "Hotel proposal · Busua, Ghana",
+    meta: [
+      "Client: USE Architecture",
+      "Status — Proposal (RIBA Stage 02)",
+      "Eleven-page studio proposal: introduction, site, proposal, reception, restaurant, rear yard, rooms, rooftop bar.",
+    ],
+    description:
+      "The African Rainbow is an exceptional hotel in an exceptional location. Located in the thriving heart of Busua — an enigmatic village steeped in history and culture which has organically grown from unassuming fishing village into Ghana's primary surf hub — the proposal retains the essential elements of the hotel's romantic decay. Rooms are upgraded with carefully curated interventions, treading a fine line between comfort, utility and elegance; the public spaces are retained, refined and upscaled, recalling the hotel's glamorous iteration as the Côte d'Azur of Ghana's Western Region, hosting wild parties and funky live high-life bands on the penthouse rooftop bar. Hedonism sits side by side with culture via an eclectic and inclusive programme of film festivals and screenings on the rooftop bar, hosted by Ghana's major film co-ops and edgy galleries. The exterior fabric is refurbished and repaired as necessary, with special attention paid to the rear yard where considerably dilapidated outbuildings are repurposed as accommodation, and the gardens are supplanted under the direction of Comfort with comprehensive herb and vegetable gardens to supply the new kitchen.",
+    cover: playAR + "page-03.jpg",
+    images: [
+      "page-03.jpg",
+      "page-04.jpg",
+      "page-05.jpg",
+      "page-06.jpg",
+      "page-07.jpg",
+      "page-08.jpg",
+      "page-09.jpg",
+      "page-10.jpg",
+    ].map((n) => playAR + n),
   },
 ];
 
