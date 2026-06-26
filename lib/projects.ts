@@ -34,7 +34,6 @@ const restOS = "/images/rest/old-street/";
 const playIOL = "/images/play/iol/";
 const playArabica = "/images/play/arabica/";
 const playBocca = "/images/play/bocca-di-lupo/";
-const playAR = "/images/play/african-rainbow/";
 const playMC = "/images/play/market-cafe/";
 const playMA = "/images/play/mobile-architecture/";
 const playN10 = "/images/play/number-10/";
@@ -632,30 +631,6 @@ export const projects: Project[] = [
       "The cultural capital of IOL was re-launched in 2018 to focus a diverse event-led programme incorporating a series of innovative kitchen residencies and cultural partnerships. With a controlled palette of stage-inspired lightweight aluminium framing combined with concealed fixed luminescent polycarbonate cladding, the by-day cocktail laboratory morphed into a by-night boutique cinema lounge hosting a variety of sound-and-vision experiences. A series of flexible and responsive artisan light-kitchens were located to the terraces, utilising sandblasted Cor-Ten enclosures to create a fertile and eclectic kitchen hub to serve the newly resident cultural community.",
     cover: playN10 + "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"].map((n) => playN10 + n),
-  },
-  {
-    slug: "african-rainbow",
-    category: "play",
-    title: "African Rainbow",
-    subtitle: "Hotel proposal · Busua, Ghana",
-    meta: [
-      "Client: USE Architecture",
-      "Status — Proposal (RIBA Stage 02)",
-      "Eleven-page studio proposal: introduction, site, proposal, reception, restaurant, rear yard, rooms, rooftop bar.",
-    ],
-    description:
-      "The African Rainbow is an exceptional hotel in an exceptional location. Located in the thriving heart of Busua — an enigmatic village steeped in history and culture which has organically grown from unassuming fishing village into Ghana's primary surf hub — the proposal retains the essential elements of the hotel's romantic decay. Rooms are upgraded with carefully curated interventions, treading a fine line between comfort, utility and elegance; the public spaces are retained, refined and upscaled, recalling the hotel's glamorous iteration as the Côte d'Azur of Ghana's Western Region, hosting wild parties and funky live high-life bands on the penthouse rooftop bar. Hedonism sits side by side with culture via an eclectic and inclusive programme of film festivals and screenings on the rooftop bar, hosted by Ghana's major film co-ops and edgy galleries. The exterior fabric is refurbished and repaired as necessary, with special attention paid to the rear yard where considerably dilapidated outbuildings are repurposed as accommodation, and the gardens are supplanted under the direction of Comfort with comprehensive herb and vegetable gardens to supply the new kitchen.",
-    cover: playAR + "page-03.jpg",
-    images: [
-      "page-03.jpg",
-      "page-04.jpg",
-      "page-05.jpg",
-      "page-06.jpg",
-      "page-07.jpg",
-      "page-08.jpg",
-      "page-09.jpg",
-      "page-10.jpg",
-    ].map((n) => playAR + n),
   },
 ];
 

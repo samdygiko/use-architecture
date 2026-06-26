@@ -4,7 +4,7 @@ import { projects } from "@/lib/projects";
 const SITE = "https://use-architecture.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticUrls = ["", "/work", "/rest", "/play", "/about", "/contact"].map(
+  const staticUrls = ["", "/work", "/rest", "/play", "/library", "/about", "/contact"].map(
     (path) => ({
       url: `${SITE}${path}`,
       lastModified: new Date(),
