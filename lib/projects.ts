@@ -18,6 +18,8 @@ export type Project = {
    *  labelled sub-headings in place of the flat image stack. Used by umbrella
    *  projects that bundle multiple discrete pieces of work. */
   sections?: ProjectSection[];
+  /** Optional PDF download rendered at the end of the image scroll. */
+  pdf?: string;
 };
 
 const work3 = "/images/work/mentmore-3/";
@@ -38,6 +40,8 @@ const playMC = "/images/play/market-cafe/";
 const playMA = "/images/play/mobile-architecture/";
 const playN10 = "/images/play/number-10/";
 const playSP = "/images/play/south-pole/";
+const playVicalex = "/images/play/vicalex/";
+const playAR = "/images/play/african-rainbow/";
 
 export const projects: Project[] = [
   // ── WORK ───────────────────────────────────────────────
@@ -632,6 +636,42 @@ export const projects: Project[] = [
       "The cultural capital of IOL was re-launched in 2018 to focus a diverse event-led programme incorporating a series of innovative kitchen residencies and cultural partnerships. With a controlled palette of stage-inspired lightweight aluminium framing combined with concealed fixed luminescent polycarbonate cladding, the by-day cocktail laboratory morphed into a by-night boutique cinema lounge hosting a variety of sound-and-vision experiences. A series of flexible and responsive artisan light-kitchens were located to the terraces, utilising sandblasted Cor-Ten enclosures to create a fertile and eclectic kitchen hub to serve the newly resident cultural community.",
     cover: playN10 + "01.jpg",
     images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"].map((n) => playN10 + n),
+  },
+  {
+    slug: "vicalex",
+    category: "play",
+    title: "Vicalex",
+    description: "[PROJECT DESCRIPTION TO BE ADDED]",
+    cover: playVicalex + "01.jpg",
+    images: [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+    ].map((n) => playVicalex + n),
+    pdf: "/downloads/vicalex.pdf",
+  },
+  {
+    slug: "african-rainbow",
+    category: "play",
+    title: "African Rainbow",
+    description: "[PROJECT DESCRIPTION TO BE ADDED]",
+    cover: playAR + "01.jpg",
+    images: [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+    ].map((n) => playAR + n),
+    pdf: "/downloads/african-rainbow.pdf",
   },
 ];
 

@@ -91,6 +91,18 @@ export default function ProjectPage({
             alt={firstSection ? `${p.title} — ${firstSection.name}` : p.title}
             priority
           />
+          {p.pdf && (
+            <div className="mt-6 text-[13px] md:text-[14px]">
+              <a
+                href={p.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-[4px] decoration-1 hover:no-underline hover:text-accent"
+              >
+                Download PDF
+              </a>
+            </div>
+          )}
         </div>
       </div>
 

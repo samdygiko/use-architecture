@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/work",
     "/rest",
     "/play",
-    "/library",
     "/use",
     "/press",
     "/contact",
