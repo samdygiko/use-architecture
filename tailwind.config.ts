@@ -13,7 +13,7 @@ const config: Config = {
         ink: "#111111",
       },
       fontFamily: {
-        sans: ["var(--font-newsreader)", "ui-serif", "Georgia", "serif"],
+        sans: ["Arial", "Helvetica", "sans-serif"],
       },
     },
   },

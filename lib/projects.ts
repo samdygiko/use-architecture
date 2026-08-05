@@ -639,3 +639,6 @@ export const projectsByCategory = (cat: Category) =>
 
 export const projectBySlug = (cat: string, slug: string) =>
   projects.find((p) => p.category === cat && p.slug === slug);
+
+export const sectionId = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

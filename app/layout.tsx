@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Newsreader } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const newsreader = Newsreader({
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-newsreader",
-});
 
 const SITE_URL = "https://use-architecture.vercel.app";
 const TITLE = "USE•Architecture";
@@ -37,7 +28,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={newsreader.variable}>
+    <html lang="en-GB">
       <body className="bg-white text-ink">
         <Header />
         <div className="pt-[60px] md:pt-[72px]">{children}</div>
