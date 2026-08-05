@@ -161,7 +161,8 @@ export const projects: Project[] = [
       "Contract: JCT Minor Works",
       "Project Cost: £156,289",
     ],
-    description: "[PROJECT DESCRIPTION TO BE ADDED]",
+    description:
+      "Davis and Katy were desperate for a flexible and elegant environment to provide and reflect the layered complex and exciting nature of their respective careers in cinema auteurity and high end hospitality management. With the added joy and complexity of family additions in the form of ageing parent Raymond and baby James both ends of the life cycle demanded specific and flexible interpretations and we chose to explore these with a series of interconnected and individually robust rooms, able to respond to diverse occupation with care and celebration.",
     cover: restCR + "CR 01.jpg",
     images: [
       "CR 01.jpg",
