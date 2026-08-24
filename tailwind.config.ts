@@ -13,7 +13,7 @@ const config: Config = {
         ink: "#111111",
       },
       fontFamily: {
-        sans: ["Arial", "Helvetica", "sans-serif"],
+        sans: ["Helvetica", "Helvetica Neue", "Arial", "sans-serif"],
       },
     },
   },

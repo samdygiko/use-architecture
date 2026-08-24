@@ -36,7 +36,7 @@ export default function ImageCycler({
         </div>
       </button>
       {total > 1 && (
-        <div className="mt-3 flex items-center justify-between text-[12px] md:text-[13px] text-ink/60">
+        <div className="mt-2 flex items-center justify-between text-[11px] md:text-[12px] text-ink/60">
           <span className="tabular-nums">
             {String(i + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </span>

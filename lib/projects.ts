@@ -60,8 +60,8 @@ export const projects: Project[] = [
       "On a tight, taut, urban site previously inhabited by enigmatic travelling folk, USE defined the burgeoning bohemia of the London Fields estate with a cool, calm, statement of intent. The first UK structure to utilise Du-Pont Corian as an innovative rain-screen system, the façade is informed by Ray Bradbury's seminal opus on authoritarianism, defined and delineated by a 5:4:1 ratio of composition, commenting on the literary nature of its former Publishing House clients. Eschewing any decorative sensibility, saving said economically informed ratio, a robust exposed RC concrete frame is countered by a lightweight floating façade, discretely responding to light and meteorological variation with a variance from luminosity to sumo-like gravitas. 7 apartments and 2 studios articulate the post-Olympic urban renaissance of London Fields by providing spaces both robustly industrial and unashamedly metropolitan.",
     cover: work3 + "02 main.jpg",
     images: [
-      "02 main.jpg",
       "01.jpg",
+      "02 main.jpg",
       "03.jpg",
       "04.jpg",
       "05.jpg",
@@ -641,6 +641,9 @@ export const projects: Project[] = [
     slug: "vicalex",
     category: "play",
     title: "Vicalex",
+    meta: ["RIBA Stages: 02", "Inception: December 2026"],
+    description:
+      "A charmingly artisanal brick factory in Ghana’s cultural heart, Kumasi - looks to upscale to 21st C infrastructure whilst expanding its identity and defining its rich, complex history with an immersive ceramic studio for engaged  leisure folk.",
     cover: playVicalex + "vicalex-01.jpg",
     images: [
       "vicalex-01.jpg",
@@ -661,6 +664,9 @@ export const projects: Project[] = [
     slug: "african-rainbow",
     category: "play",
     title: "African Rainbow",
+    meta: ["RIBA Stages: 01 - 02", "Inception: December 2026"],
+    description:
+      "On a nomadic meander along Ghanas’s Atlantic seaboard we stumble on an languid surf village and its enigmatic heart, a faded, splendid villa - aware of its grand past whilst looking forward to a glorious inclusive future.",
     cover: playAR + "african-rainbow-01.jpg",
     images: [
       "african-rainbow-01.jpg",
@@ -684,6 +690,33 @@ export const projectsByCategory = (cat: Category) =>
 
 export const projectBySlug = (cat: string, slug: string) =>
   projects.find((p) => p.category === cat && p.slug === slug);
+
+const HOMEPAGE_ORDER = [
+  "iol",
+  "number-10",
+  "mentmore-3",
+  "mentmore-5",
+  "sunshine-farm",
+  "mobile-architecture",
+  "vicalex",
+  "african-rainbow",
+  "bocca-di-lupo",
+  "arabica",
+  "market-cafe",
+  "south-pole",
+  "golden-lane",
+  "london-fields-estate",
+  "old-street",
+  "lower-clapton-road",
+  "cassland-road",
+  "evering-road",
+  "bisley-road",
+];
+
+export const homepageProjects = () =>
+  HOMEPAGE_ORDER.map((slug) => projects.find((p) => p.slug === slug)).filter(
+    (p): p is Project => Boolean(p),
+  );
 
 export const sectionId = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

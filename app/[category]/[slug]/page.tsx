@@ -44,15 +44,15 @@ export default function ProjectPage({
 
   const TextColumn = (
     <div className="md:sticky md:top-[96px] md:self-start">
-      <p className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] text-ink/60 mb-3">
+      <p className="text-[11px] md:text-[12px] uppercase tracking-[0.08em] text-ink/60 mb-2">
         {p.category}
         {p.subtitle ? <> · {p.subtitle}</> : null}
       </p>
-      <h1 className="font-normal text-[26px] md:text-[36px] leading-[1.15] tracking-tight mb-6">
+      <h1 className="font-normal text-[20px] md:text-[26px] leading-[1.2] tracking-tight mb-4">
         {p.title}
       </h1>
       {p.meta && p.meta.length > 0 && (
-        <ul className="text-[13px] md:text-[14px] text-ink/70 space-y-1 mb-6">
+        <ul className="text-[11px] md:text-[12px] text-ink/70 space-y-1 mb-4">
           {p.meta.map((m) => (
             <li key={m}>{m}</li>
           ))}
@@ -61,7 +61,7 @@ export default function ProjectPage({
       {p.description && (
         <p
           className={
-            "text-[14px] md:text-[15px] leading-relaxed " +
+            "text-[12px] md:text-[13px] leading-relaxed " +
             (p.description.startsWith("[")
               ? "italic text-ink/50"
               : "text-ink/90")
@@ -74,15 +74,15 @@ export default function ProjectPage({
   );
 
   return (
-    <main className="mx-auto max-w-[1400px] px-5 md:px-8 py-8 md:py-14">
+    <main className="mx-auto max-w-[1100px] px-5 md:px-8 py-6 md:py-10">
       <div
         id={firstSection ? sectionId(firstSection.name) : undefined}
-        className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-10 md:gap-14 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]"
+        className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
       >
         {TextColumn}
         <div className="md:sticky md:top-[96px] md:self-start">
           {firstSection && (
-            <h2 className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] text-ink/60 mb-3">
+            <h2 className="text-[11px] md:text-[12px] uppercase tracking-[0.08em] text-ink/60 mb-2">
               {firstSection.name}
             </h2>
           )}
@@ -92,7 +92,7 @@ export default function ProjectPage({
             priority
           />
           {p.pdf && (
-            <div className="mt-6 text-[13px] md:text-[14px]">
+            <div className="mt-4 text-[12px] md:text-[13px]">
               <a
                 href={p.pdf}
                 target="_blank"
@@ -107,22 +107,22 @@ export default function ProjectPage({
       </div>
 
       {hasSections && p.sections!.length > 1 && (
-        <div className="mt-16 md:mt-24 space-y-16 md:space-y-24">
+        <div className="mt-12 md:mt-16 space-y-12 md:space-y-16">
           {p.sections!.slice(1).map((sec) => (
             <section
               key={sec.name}
               id={sectionId(sec.name)}
-              className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-10 md:gap-14 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]"
+              className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
             >
               <div className="md:sticky md:top-[96px] md:self-start">
-                <p className="text-[12px] md:text-[13px] uppercase tracking-[0.08em] text-ink/60 mb-3">
+                <p className="text-[11px] md:text-[12px] uppercase tracking-[0.08em] text-ink/60 mb-2">
                   {p.category}
                   {p.subtitle ? <> · {p.subtitle}</> : null}
                 </p>
-                <h2 className="font-normal text-[22px] md:text-[30px] leading-[1.15] tracking-tight mb-3">
+                <h2 className="font-normal text-[18px] md:text-[22px] leading-[1.2] tracking-tight mb-2">
                   {sec.name}
                 </h2>
-                <p className="text-[13px] md:text-[14px] text-ink/60">
+                <p className="text-[11px] md:text-[12px] text-ink/60">
                   Part of {p.title}
                 </p>
               </div>

@@ -6,7 +6,7 @@ export default function ProjectGrid({ items }: { items: Project[] }) {
   return (
     <ul
       role="list"
-      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-14 md:gap-x-14 md:gap-y-20"
+      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-5 md:gap-x-3 md:gap-y-7"
     >
       {items.map((p) => (
         <li key={`${p.category}-${p.slug}`}>
@@ -24,7 +24,7 @@ export default function ProjectGrid({ items }: { items: Project[] }) {
                 className="object-cover"
               />
             </div>
-            <div className="mt-3 md:mt-4 text-[13px] md:text-[14px] leading-tight text-ink group-hover:text-accent transition-colors">
+            <div className="mt-2 text-[11px] md:text-[12px] leading-tight text-ink group-hover:text-accent transition-colors">
               {p.title}
             </div>
           </Link>
