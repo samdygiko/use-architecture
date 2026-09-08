@@ -6,7 +6,7 @@ export default function ProjectGrid({ items }: { items: Project[] }) {
   return (
     <ul
       role="list"
-      className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-2 gap-y-5 md:gap-x-3 md:gap-y-7"
+      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-5 md:gap-x-3 md:gap-y-7"
     >
       {items.map((p) => (
         <li key={`${p.category}-${p.slug}`}>
@@ -20,8 +20,8 @@ export default function ProjectGrid({ items }: { items: Project[] }) {
                 src={p.cover}
                 alt={p.title}
                 fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover"
+                sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
+                className="object-cover object-center"
               />
             </div>
             <div className="mt-2 text-[11px] md:text-[12px] leading-tight text-ink group-hover:text-accent transition-colors">

@@ -44,15 +44,15 @@ export default function ProjectPage({
 
   const TextColumn = (
     <div className="md:sticky md:top-[96px] md:self-start">
-      <p className="text-[11px] md:text-[12px] uppercase tracking-[0.08em] text-ink/60 mb-2">
+      <p className="text-[10px] md:text-[11px] uppercase tracking-[0.08em] text-ink/60 mb-2">
         {p.category}
         {p.subtitle ? <> · {p.subtitle}</> : null}
       </p>
-      <h1 className="font-normal text-[20px] md:text-[26px] leading-[1.2] tracking-tight mb-4">
+      <h1 className="font-normal text-[16px] md:text-[20px] leading-[1.2] tracking-tight mb-3">
         {p.title}
       </h1>
       {p.meta && p.meta.length > 0 && (
-        <ul className="text-[11px] md:text-[12px] text-ink/70 space-y-1 mb-4">
+        <ul className="text-[10px] md:text-[11px] text-ink/70 space-y-1 mb-3">
           {p.meta.map((m) => (
             <li key={m}>{m}</li>
           ))}
@@ -61,7 +61,7 @@ export default function ProjectPage({
       {p.description && (
         <p
           className={
-            "text-[12px] md:text-[13px] leading-relaxed " +
+            "text-[11px] md:text-[12px] leading-relaxed " +
             (p.description.startsWith("[")
               ? "italic text-ink/50"
               : "text-ink/90")
@@ -74,15 +74,15 @@ export default function ProjectPage({
   );
 
   return (
-    <main className="mx-auto max-w-[1100px] px-5 md:px-8 py-6 md:py-10">
+    <main className="mx-auto max-w-[1500px] px-5 md:px-8 py-6 md:py-10">
       <div
         id={firstSection ? sectionId(firstSection.name) : undefined}
-        className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+        className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)]"
       >
         {TextColumn}
         <div className="md:sticky md:top-[96px] md:self-start">
           {firstSection && (
-            <h2 className="text-[11px] md:text-[12px] uppercase tracking-[0.08em] text-ink/60 mb-2">
+            <h2 className="text-[10px] md:text-[11px] uppercase tracking-[0.08em] text-ink/60 mb-2">
               {firstSection.name}
             </h2>
           )}
@@ -92,7 +92,7 @@ export default function ProjectPage({
             priority
           />
           {p.pdf && (
-            <div className="mt-4 text-[12px] md:text-[13px]">
+            <div className="mt-4 text-[11px] md:text-[12px]">
               <a
                 href={p.pdf}
                 target="_blank"
@@ -112,17 +112,17 @@ export default function ProjectPage({
             <section
               key={sec.name}
               id={sectionId(sec.name)}
-              className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+              className="scroll-mt-[80px] md:scroll-mt-[100px] grid gap-8 md:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,3fr)]"
             >
               <div className="md:sticky md:top-[96px] md:self-start">
-                <p className="text-[11px] md:text-[12px] uppercase tracking-[0.08em] text-ink/60 mb-2">
+                <p className="text-[10px] md:text-[11px] uppercase tracking-[0.08em] text-ink/60 mb-2">
                   {p.category}
                   {p.subtitle ? <> · {p.subtitle}</> : null}
                 </p>
-                <h2 className="font-normal text-[18px] md:text-[22px] leading-[1.2] tracking-tight mb-2">
+                <h2 className="font-normal text-[15px] md:text-[18px] leading-[1.2] tracking-tight mb-2">
                   {sec.name}
                 </h2>
-                <p className="text-[11px] md:text-[12px] text-ink/60">
+                <p className="text-[10px] md:text-[11px] text-ink/60">
                   Part of {p.title}
                 </p>
               </div>
