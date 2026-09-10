@@ -19,7 +19,6 @@ const CATEGORIES: { key: Category; label: string }[] = [
 
 const TOP_NAV = [
   { label: "Use", href: "/use" },
-  { label: "Contact", href: "/contact" },
   { label: "Press", href: "/press" },
 ];
 
