@@ -387,7 +387,7 @@ export const projects: Project[] = [
     ],
     description:
       "Air-line style meets igloo in this cool, cavernous basement dive dance bar.",
-    cover: playSP + "01.jpg",
+    cover: playSP + "cover.jpg",
     images: [
       "01.jpg",
       "03.jpg",
@@ -644,7 +644,7 @@ export const projects: Project[] = [
     meta: ["RIBA Stages: 02", "Inception: December 2026"],
     description:
       "A charmingly artisanal brick factory in Ghana’s cultural heart, Kumasi - looks to upscale to 21st C infrastructure whilst expanding its identity and defining its rich, complex history with an immersive ceramic studio for engaged  leisure folk.",
-    cover: playVicalex + "vicalex-01.jpg",
+    cover: playVicalex + "cover.jpg",
     images: [
       "vicalex-01.jpg",
       "vicalex-02.jpg",
@@ -667,7 +667,7 @@ export const projects: Project[] = [
     meta: ["RIBA Stages: 01 - 02", "Inception: December 2026"],
     description:
       "On a nomadic meander along Ghanas’s Atlantic seaboard we stumble on an languid surf village and its enigmatic heart, a faded, splendid villa - aware of its grand past whilst looking forward to a glorious inclusive future.",
-    cover: playAR + "african-rainbow-01.jpg",
+    cover: playAR + "cover.jpg",
     images: [
       "african-rainbow-01.jpg",
       "african-rainbow-02.jpg",
